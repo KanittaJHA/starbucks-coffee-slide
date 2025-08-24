@@ -4,22 +4,134 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon" />
 
     <!--=============== REMIXICONS ===============-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
 
     <!--=============== SCRIPT ===============-->
+    <script src="script.js" defer></script>
 
     <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="style.css" />
 
     <title>Starbucks</title>
   </head>
   <body>
     <!--==================== HEADER ====================-->
-    <header></header>
+    <header>
+      <figure class="logo">
+        <img src="images/logo.png" alt="" />
+      </figure>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="">Coffee</a></li>
+          <li><a href="">Menu</a></li>
+          <li><a href="">About</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!--==================== MAIN ====================-->
     <main>
-      <section class="carousel next"></section>
+      <section class="carousel next">
+        <div class="list">
+          <article class="item">
+            <div class="main-content" style="background-color: #9c4d2f">
+              <div class="content">
+                <h2>Caffee Latte, a new product</h2>
+                <p class="price">$ 20</p>
+                <p class="description">
+                  A smooth and creamy blend of rich espresso and perfectly
+                  steamed milk, crafted to bring out the full depth of flavor.
+                  Warm, comforting, and satisfying, Caffee Latte is the perfect
+                  companion to brighten your mornings or relax your afternoons.
+                </p>
+                <button class="addToCard">Add To Card</button>
+              </div>
+            </div>
+
+            <figure class="image">
+              <img src="images/1.png" alt="" />
+              <figcaption>Caffee Latte</figcaption>
+            </figure>
+          </article>
+
+          <article class="item">
+            <div class="main-content" style="background-color: #f5bfaf">
+              <div class="content">
+                <h2>Strawberry mocha, a new product</h2>
+                <p class="price">$ 19</p>
+                <p class="description">
+                  A delightful fusion of rich mocha, bold espresso, and the
+                  sweet freshness of strawberries, blended into perfect harmony.
+                  Smooth, indulgent, and refreshing — an irresistible treat that
+                  brightens your day with every sip.
+                </p>
+                <button class="addToCard">Add To Card</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="images/2.png" alt="" />
+              <figcaption>Strawberry Mocha</figcaption>
+            </figure>
+          </article>
+
+          <article class="item">
+            <div class="main-content" style="background-color: #dedfe1">
+              <div class="content">
+                <h2>Doppio espresso, a new product</h2>
+                <p class="price">$ 25</p>
+                <p class="description">
+                  A bold double shot of espresso, crafted from freshly ground
+                  beans to deliver deep aroma and rich flavor. Strong, smooth,
+                  and energizing — the ultimate choice for coffee purists who
+                  crave intensity in every sip.
+                </p>
+                <button class="addToCard">Add To Card</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="images/3.png" alt="" />
+              <figcaption>Doppio espresso</figcaption>
+            </figure>
+          </article>
+
+          <article class="item">
+            <div class="main-content" style="background-color: #7eb63d">
+              <div class="content">
+                <h2>Matcha Latte Macchiato, a new product</h2>
+                <p class="price">$ 20</p>
+                <p class="description">
+                  A harmonious blend of vibrant matcha and creamy steamed milk,
+                  topped with a delicate espresso shot. Smooth, fragrant, and
+                  visually stunning — the perfect balance of earthy green tea
+                  and rich coffee in every sip.
+                </p>
+                <button class="addToCard">Add To Card</button>
+              </div>
+            </div>
+            <figure class="image">
+              <img src="images/4.png" alt="" />
+              <figcaption>Matcha Latte Macchiato</figcaption>
+            </figure>
+          </article>
+        </div>
+
+        <div class="arrows">
+          <button id="prev">
+            <i class="ri-arrow-left-s-line"></i>
+          </button>
+
+          <button id="next">
+            <i class="ri-arrow-right-s-line"></i>
+          </button>
+        </div>
+      </section>
     </main>
   </body>
 </html>

@@ -32,8 +32,199 @@ body {
 }
 
 /*=============== HEADER & NAV ===============*/
+header {
+  display: grid;
+  grid-template-columns: 80px 1fr calc(var(--w-image) * var(--calculate));
+  grid-template-rows: 80px;
+  position: relative;
+  z-index: 10;
+  border-bottom: 1px solid var(--border-color);
+}
+
+header .logo img {
+  width: 80%;
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 30px;
+}
+
+header nav a {
+  color: #000000;
+  font-weight: 500;
+}
+
+header nav {
+  border-left: 1px solid var(--border-color);
+}
 
 /*=============== MAIN ===============*/
+.carousel {
+  margin-top: -80px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel .list {
+  height: 100%;
+  position: relative;
+}
+
+.carousel .list::before {
+  content: "";
+  position: absolute;
+  width: var(--w-image);
+  height: 100%;
+  top: 0;
+  left: calc(100% - calc(var(--w-image) * var(--calculate)));
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.carousel .list::after {
+  content: "";
+  background-color: red;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 400px;
+  height: 300px;
+  z-index: 10;
+  pointer-events: none;
+  border-radius: 20px 50px 110px 230px;
+  filter: blur(150px);
+  opacity: 0.6;
+}
+
+.carousel .list .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel .list .item .image {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: var(--w-image);
+  height: 100%;
+  top: 0;
+  left: calc(100% - calc(var(--w-image) * var(--calculate)));
+  padding: 20px;
+  font-weight: 500;
+}
+
+.carousel .list .item .image img {
+  width: 90%;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 150px 50px #9e0c0c55);
+}
+
+.carousel .list .item .image figcaption {
+  font-family: var(--body-font);
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-align: center;
+  margin-bottom: 30px;
+  width: 70%;
+}
+
+.carousel .list .item .main-content {
+  height: 100%;
+  display: grid;
+  grid-template-columns: calc(100% - calc(var(--w-image) * var(--calculate)));
+}
+
+.carousel .list .item .main-content .content {
+  padding: 150px 20px 20px 80px;
+}
+
+.carousel .list .item .main-content .content h2 {
+  font-size: 6rem;
+  font-family: var(--body-font);
+}
+
+.carousel .list .item .main-content .content .price {
+  font-family: var(--body-font);
+  font-size: 3rem;
+  margin: 20px 0;
+}
+
+.carousel .list .item .main-content .content .description {
+  width: 85%;
+  font-size: 1.2rem;
+}
+
+.carousel .list .item .main-content .content .addToCard {
+  background-color: #4f8b69;
+  color: #fff;
+  padding: 10px 30px;
+  font-family: var(--family-font);
+  font-size: large;
+  font-weight: 500;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: color 0.4s ease;
+  /* ช้าเริ่ม => เร็วกลาง => ช้าจบ */
+}
+
+.carousel .list .item .main-content .content .addToCard:hover {
+  background-color: #134b2c;
+}
+
+.arrows {
+  position: absolute;
+  bottom: 20px;
+  width: calc(100% - calc(var(--w-image) * var(--calculate)));
+  display: grid;
+  grid-template-columns: repeat(2, 50px);
+  grid-template-rows: 50px;
+  justify-content: end;
+  gap: 10px;
+}
+
+.arrows button {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  border-radius: 100%;
+  color: #fff;
+  box-shadow: 0 10px 40px #5555;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  backdrop-filter: none;
+}
+
+.arrows button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: none;
+}
+
+.arrows button i {
+  font-family: monospace;
+  font-size: large;
+  font-weight: bold;
+}
 
 /*=============== ANIMATION ===============*/
 /* Effect Animation in Next Click */
