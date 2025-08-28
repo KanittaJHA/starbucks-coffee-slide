@@ -3,7 +3,7 @@
 
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --w-image: 500px;
+  --w-image: 460px;
   --calculate: calc(3 / 2);
 
   /*========== Colors ==========*/
@@ -11,7 +11,6 @@
   --border-color: #fff5;
 
   /*========== Font and typography ==========*/
-  /* อัล-โบ-เร-โต */
   --body-font: "Aboreto", system-ui;
   --family-font: "Poppins", sans-serif;
 }
@@ -36,14 +35,14 @@ body {
 header {
   display: grid;
   grid-template-columns: 80px 1fr calc(var(--w-image) * var(--calculate));
-  grid-template-rows: 80px;
+  grid-template-rows: 75px;
   position: relative;
   z-index: 10;
   border-bottom: 1px solid var(--border-color);
 }
 
 header .logo img {
-  width: 80%;
+  width: 70%;
 }
 
 header .logo {
@@ -72,7 +71,7 @@ header nav {
 
 /*=============== MAIN ===============*/
 .carousel {
-  margin-top: -80px;
+  margin-top: -76px;
   width: 100%;
   height: 100vh;
   overflow: hidden;
@@ -88,15 +87,8 @@ header nav {
   position: absolute;
   width: var(--w-image);
   height: 100%;
-  /* background-color: rebeccapurple; */
   top: 0;
   left: calc(100% - calc(var(--w-image) * var(--calculate)));
-  /* แตกทีละชั้น
-  var(--w-image) = ค่าที่กำหนดไว้ใน :root เช่น --w-image: 500px;
-  var(--calculate) = ตัวคูณ เช่น --calculate: calc(3 / 2); (= 1.5)
-  calc(var(--w-image) * var(--calculate)) = เอา 500px * 1.5 = 750px (สมมติจอใหญ่)
-  calc(100% - 750px)
-  ความกว้างเต็ม (100%) ลบด้วย 750px */
   border-left: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   z-index: 10;
@@ -104,7 +96,6 @@ header nav {
 }
 
 .carousel .list::after {
-  /* ได้เอฟเฟกต์ overlay โดยไม่ต้องเพิ่ม <div> ใน HTML */
   content: "";
   background-color: red;
   position: absolute;
@@ -142,7 +133,7 @@ header nav {
 }
 
 .carousel .list .item .image img {
-  width: 90%;
+  width: 65%;
   margin-bottom: 20px;
   filter: drop-shadow(0 150px 50px #9e0c0c55);
 }
@@ -167,14 +158,9 @@ header nav {
 }
 
 .carousel .list .item .main-content .content h2 {
-  font-size: 6rem;
+  font-size: 3.6rem;
   font-family: var(--body-font);
 }
-
-/* .carousel .list .item .main-content .content h2 {
-  font-size: 5rem;
-  font-family: var(--body-font);
-} */
 
 .carousel .list .item .main-content .content .price {
   font-family: var(--body-font);
@@ -183,8 +169,8 @@ header nav {
 }
 
 .carousel .list .item .main-content .content .description {
-  width: 85%;
-  font-size: 1.1rem;
+  width: 100%;
+  font-size: 0.85rem;
 }
 
 .carousel .list .item .main-content .content .addToCard {
@@ -197,6 +183,12 @@ header nav {
   border-radius: 30px;
   border: none;
   margin-top: 20px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.carousel .list .item .main-content .content .addToCard:hover {
+  background-color: #000000;
 }
 
 .arrows {
@@ -344,10 +336,15 @@ header nav {
 
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 1025px) {
   :root {
-    --w-image: 400px;
     --calculate: 1;
+  }
+
+  .carousel .list .item .image img {
+    width: 58%;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 150px 50px #9e0c0c55);
   }
 
   .carousel .list .item .main-content .content h2 {
@@ -380,6 +377,13 @@ header nav {
     width: 100%;
     text-align: center;
   }
+
+  .carousel .list .item .main-content {
+    height: auto;
+    display: block;
+    padding: 20px;
+  }
+
   .carousel .list .item .main-content .content {
     display: none;
   }
