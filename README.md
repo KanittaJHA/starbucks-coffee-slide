@@ -25,7 +25,7 @@ This project demonstrates a responsive product showcase with animations, navigat
 
 ---
 
-## Project Structure
+## Project Structure & Installation
 
 ````text
 starbucks-coffee/
@@ -37,10 +37,15 @@ starbucks-coffee/
 
 ---
 
-```
 ## Installation & Usage
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/KanittaJHA/starbucks-coffee-slide.git
+1. Clone the repository:
+```bash
+  git clone https://github.com/KanittaJHA/starbucks-coffee-slide.git
+
+2. Navigate into the project folder:
+```bash
+  cd starbucks-coffee-slide
+
+3. Open index.html in your browser or use a local server (e.g., VS Code Live Server)
 ````
