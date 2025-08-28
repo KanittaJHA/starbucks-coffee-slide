@@ -28,7 +28,7 @@ This project demonstrates a responsive product showcase with animations, navigat
 ## Project Structure
 
 ````text
-starbucks-carousel/
+starbucks-coffee/
 │── index.html    # Main HTML file (structure of the carousel)
 │── style.css     # Stylesheet (styling, layout, animations)
 │── script.js     # Carousel logic (navigation, autoplay)
@@ -37,6 +37,7 @@ starbucks-carousel/
 
 ---
 
+```
 ## Installation & Usage
 
 1. Clone this repository:
