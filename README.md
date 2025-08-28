@@ -27,12 +27,13 @@ This project demonstrates a responsive product showcase with animations, navigat
 
 ## Project Structure
 
+````text
 starbucks-carousel/
-│── index.html # Main HTML file (structure of the carousel)
-│── style.css # Stylesheet (styling, layout, animations)
-│── script.js # Carousel logic (navigation, autoplay)
-│── images/ # Assets (logo + product images)
-│── README.md # Project documentation
+│── index.html    # Main HTML file (structure of the carousel)
+│── style.css     # Stylesheet (styling, layout, animations)
+│── script.js     # Carousel logic (navigation, autoplay)
+│── images/       # Assets (logo + product images)
+│── README.md     # Project documentation
 
 ---
 
@@ -41,4 +42,4 @@ starbucks-carousel/
 1. Clone this repository:
    ```bash
    git clone https://github.com/KanittaJHA/starbucks-coffee-slide.git
-   ```
+````
