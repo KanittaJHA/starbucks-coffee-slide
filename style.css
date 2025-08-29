@@ -378,12 +378,6 @@ header nav {
     text-align: center;
   }
 
-  .carousel .list .item .main-content {
-    height: auto;
-    display: block;
-    padding: 20px;
-  }
-
   .carousel .list .item .main-content .content {
     display: none;
   }
